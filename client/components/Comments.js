@@ -1,6 +1,10 @@
 import React from 'react';
 
 const Comment = React.createClass({
+  handleDelete(index){
+    const postId = this.props.params.postId;
+    this.props.removeComment(postId, index);
+  },
   handleSubmit(e) {
     e.preventDefault();
     const postId = this.props.params.postId;
@@ -17,7 +21,7 @@ const Comment = React.createClass({
           <p>
             <strong>{comment.user}</strong>
             {comment.text}
-            <button className='remove-comment'>&times;</button>
+            <button className='remove-comment' onClick={() => this.handleDelete(index)}>&times;</button>
           </p>
         </div>
       )

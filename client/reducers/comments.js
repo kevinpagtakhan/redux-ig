@@ -7,7 +7,13 @@ function postComments(state = [], action) {
           text: action.comment,
           user: action.author
         }
-      ]
+      ];
+      break;
+    case 'REMOVE_COMMENT':
+      return [
+        ...state.slice(0, action.index),
+        ...state.slice(action.index + 1)
+      ];
       break;
     default:
       return state;
