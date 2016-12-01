@@ -18,7 +18,7 @@ const Photo = React.createClass({
           index={index}
           post={post}
         />
-        <Comments comments={comments}/>
+        <Comments {...this.props} comments={comments}/>
       </div>
     )
   }
