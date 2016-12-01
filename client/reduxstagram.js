@@ -11,12 +11,14 @@ import PhotoGrid from './components/PhotoGrid';
 import Photo from './components/Photo';
 
 const router = (
-  <Router history={browserHistory}>
-    <Route path='/' component={Main}>
-      <IndexRoute component={PhotoGrid}></IndexRoute>
-      <Route path='/view/:postId' component={Photo}></Route>
-    </Route>
-  </Router>
+  <Provider store={store}>
+    <Router history={history}>
+      <Route path='/' component={Main}>
+        <IndexRoute component={PhotoGrid}></IndexRoute>
+        <Route path='/view/:postId' component={Photo}></Route>
+      </Route>
+    </Router>
+  </Provider>
 );
 
 render(router, document.getElementById('root'));
