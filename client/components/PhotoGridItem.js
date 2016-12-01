@@ -19,7 +19,7 @@ const PhotoGridItem = React.createClass({
             />
           </Link>
           <CSSTransitionGroup
-            transition='like'
+            transitionName='like'
             transitionEnterTimeout={500}
             transitionLeaveTimeout={500}
           >
@@ -34,7 +34,7 @@ const PhotoGridItem = React.createClass({
           <figcaption>
             <p>{post.caption}</p>
             <div className='control-buttons'>
-              <button>
+              <button onClick={ () => {this.props.increment(this.props.index)} }>
                 &hearts; {post.likes}
               </button>
               <Link className='button' to={/view/ + post.code}>
