@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Main = React.createClass({
+const Photo = React.createClass({
   render() {
     return (
-      <div class='photo'>
+      <div className='single-photo'>
         Photo
       </div>
     )
   }
 });
 
-export default Main;
+export default Photo;

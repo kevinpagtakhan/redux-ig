@@ -8,6 +8,7 @@ const Main = React.createClass({
         <h1>
           <Link to='/'>Instagram</Link>
         </h1>
+        { this.props.children }
       </div>
     )
   }

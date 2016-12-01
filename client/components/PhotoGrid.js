@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Main = React.createClass({
+const PhotoGrid = React.createClass({
   render() {
     return (
-      <div class='photo-grid'>
+      <div className='photo-grid'>
         Photo grid
       </div>
     )
   }
 });
 
-export default Main;
+export default PhotoGrid;
